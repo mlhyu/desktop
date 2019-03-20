@@ -1,3 +1,11 @@
+export async function timeout(timeout: number): Promise<void> {
+  return new Promise((resolve, reject) => {
+    window.setTimeout(() => {
+      resolve()
+    }, timeout)
+  })
+}
+
 /**
  * Wrap a promise in a minimum timeout, so that it only returns after both the
  * timeout and promise have completed.
