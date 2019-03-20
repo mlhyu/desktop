@@ -24,7 +24,7 @@ export const initializeNewRebaseFlow = (state: IRepositoryState) => {
   }
 
   const initialState: ChooseBranchesStep = {
-    step: RebaseStep.ChooseBranch,
+    kind: RebaseStep.ChooseBranch,
     defaultBranch,
     currentBranch,
     allBranches,
@@ -40,7 +40,7 @@ export const initializeRebaseFlowForConflictedRepository = (
   const { targetBranch, baseBranch } = conflictState
 
   const initialState: ShowConflictsStep = {
-    step: RebaseStep.ShowConflicts,
+    kind: RebaseStep.ShowConflicts,
     targetBranch,
     baseBranch,
   }
